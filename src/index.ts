@@ -1,6 +1,9 @@
 import express, { Express, Request, Response } from "express";
 import cors from "cors";
 import { AddressInfo } from "net";
+import criarTurma from "./endpoints/turmas/criarTurma";
+import buscarTurmas from "./endpoints/turmas/buscarTurmas"
+import mudarModulo from "./endpoints/turmas/mudarModulo";
 import createStudent from "./data/endpoints/Estudante/createStudent";
 import getStudentByName from "./data/endpoints/Estudante/getStudentByName";
 import editStudentClass from "./data/endpoints/Estudante/editStudentClass";
@@ -14,6 +17,10 @@ app.get("/", (req: Request, res: Response) => {
     res.send("Olá, Pessoal")
 })
 
+// TURMA ENDPOINTS
+app.post("/turmas", criarTurma)
+app.get("/turmas", buscarTurmas)
+app.put("/turmas", mudarModulo)
 //endpoints de estudante
 app.put("/student", createStudent)
 app.get("/student/:nome", getStudentByName)

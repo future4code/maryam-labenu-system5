@@ -38,3 +38,42 @@ export class Estudante {
         return this.hobbies
     }
 }
+
+//     CLASSE DE ESTUDANTE
+
+export enum Docentes {
+    CHIJO = "Letícia Chijo",
+    AMANDA = "Amanda Rangel",
+    YUZO = "Yuzo",
+    JOAO = "João Alves",
+    MATEUS = "Mateus Gesualdo",
+    INDIO = "Índio"
+}
+
+export class Turma {
+    
+    constructor (
+        private id: string,
+        private nome: string,
+        private docentes: Docentes[],
+        private modulo: number = 10
+    ) {
+        console.log(`A turma ${this.nome} foi criada com sucesso!`)
+    };
+
+    getId(): string {
+        return this.id
+    };
+
+    getNome(): string {
+        return this.nome
+    };
+
+    getDocentes(): Docentes[] {
+        return this.docentes
+    };
+
+    getModulo(): number {
+        return this.modulo
+    };
+}
