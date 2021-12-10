@@ -8,7 +8,7 @@ export default async function editStudentClass(
     try {
         if (
             req.body.id === '' ||
-            req.body.turmaId === ''
+            req.body.turma_id === ''
         ) {
             res.status(400).send({
                 message: "Nenhum dos campos podem estar em branco"
@@ -17,7 +17,7 @@ export default async function editStudentClass(
 
         await updateStudent(
             req.body.id,
-            req.body.turmaId
+            req.body.turma_id
         )
 
         res.status(200).send({

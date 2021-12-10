@@ -10,22 +10,22 @@ export default async function createStudent(
         if (
             !req.body.nome ||
             !req.body.email ||
-            !req.body.dataNasc ||
-            !req.body.turmaId
+            !req.body.data_nasc ||
+            !req.body.turma_id
         ) {
             res
                 .status(400)
                 .send('Preencha os campos "nome", "email", "data_nasc" e "turma_id"')
         }
 
-        const id: string = Date.now() + Math.random.toString()
+        const id: string = Date.now().toString()
 
         await inserStudent(
             id,
             req.body.nome,
             req.body.email,
-            req.body.dataNasc,
-            req.body.turmaId
+            req.body.data_nasc,
+            req.body.turma_id
         )
 
 
@@ -36,7 +36,9 @@ export default async function createStudent(
 
     } catch (error) {
         res.status(400).send({
-            message: error.message || error.sqlMessage
+            message: error
         })
     }
 }
+
+//error.message || error.sqlMessage

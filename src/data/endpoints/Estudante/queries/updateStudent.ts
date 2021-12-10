@@ -2,12 +2,12 @@ import { connection } from "../../../connection";
 
 export default async function updateStudent(
     id: string,
-    turmaId: string
+    turma_id: string
 ) {
-    if (turmaId) {
+    if (turma_id) {
         await connection.raw(`
         UPDATE ESTUDANTE
-        SET turma_id = ${turmaId}
+        SET turma_id = ${turma_id}
         WHERE id = ${id};
         `)
     }

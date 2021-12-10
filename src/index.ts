@@ -24,7 +24,7 @@ app.put("/turmas", mudarModulo)
 //endpoints de estudante
 app.put("/student", createStudent)
 app.get("/student/:nome", getStudentByName)
-app.post("/student/edit/:id", editStudentClass)
+app.post("/student/edit", editStudentClass)
 
 
 const server = app.listen(process.env.PORT || 3003, () => {
