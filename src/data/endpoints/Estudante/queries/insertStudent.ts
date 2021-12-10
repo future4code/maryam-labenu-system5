@@ -4,14 +4,14 @@ export default async function inserStudent(
     id: string,
     nome: string,
     email: string,
-    dataNasc: string,
-    turmaId: string
+    data_nasc: string,
+    turma_id: string
 ) {
     await connection.insert({
         id,
         nome,
         email,
-        data_nasc: dataNasc,
-        turma_id: turmaId
+        data_nasc,
+        turma_id
     }).into('ESTUDANTE')
 }
