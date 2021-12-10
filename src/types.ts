@@ -39,7 +39,7 @@ export class Estudante {
     }
 }
 
-//     CLASSE DE ESTUDANTE
+//     CLASSE DE TURMA
 
 export enum Docentes {
     CHIJO = "Letícia Chijo",
@@ -76,4 +76,54 @@ export class Turma {
     getModulo(): number {
         return this.modulo
     };
+}
+
+//     CLASSE DE DOCENTES
+
+export enum Especialidades {
+    JS = "JS",
+    CSS = "CSS",
+    REACT = "React",
+    TYPESCRIPT = "Typescript",
+    POO = "Programação Orientada a Objetos",
+}
+
+export class Docente {
+
+    constructor(
+        public id: string,
+        public nome: Docentes[],
+        public email: string,
+        public data_nasc: string, 
+        public turma_id: string, 
+        public especialidades: Especialidades[]
+    ) {
+    
+            console.log(`O professor ${this.nome} foi criada com sucesso!`)
+    
+    }
+
+    getDocenteId(): string{
+        return this.id
+    }
+
+    getDocenteName(): Docentes[] {
+        return this.nome
+    }
+
+    getDocenteEmail(): string{
+        return this.email
+    }
+
+    getDocenteDateBirth(): string{
+        return this.data_nasc
+    }
+
+    getDocenteClass(): string{
+        return this.turma_id
+    }
+
+    getDocenteEspecialidades(): Especialidades[]{
+        return this.especialidades
+    }
 }
