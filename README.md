@@ -18,12 +18,12 @@ https://documenter.getpostman.com/view/17590979/UVR5q8m4
 
 ## Tabelas criadas:
 
-1 - Estudantes
-2 - Docentes
-3 - Turmas
-4 - Especialidade do docente
-5 - Hobbys do estudante
-6 - Tabela de join para estudante e hobby
-7 - Tabela de join para docente e especialidade
+- Estudantes
+- Docentes
+- Turmas
+- Especialidade do docente
+- Hobbys do estudante
+- Tabela de join para estudante e hobby
+- Tabela de join para docente e especialidade
 
 
