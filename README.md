@@ -1,3 +1,29 @@
-## LabenuSystem:
+# LabenuSystem
 
-https://labenu.notion.site/LabenuSystem-5d595aaf47c248fea3ce8ade75783f47
+Aplicação de backend desenvolvida em Typescript para gerir estudantes, turmas e docentes de uma escola virtual de programação.
+Foi utilizado o MySQL como banco de dados, o Postman para construir a documentação da API e o nodejs para a construção dos endpoints e queries.
+
+
+## Integrantes
+
+- Élida Nunes
+- Marina Ramminger
+- Sarah Romanhol
+
+
+## Documentação do Postam:
+
+https://documenter.getpostman.com/view/17590979/UVR5q8m4
+
+
+## Tabelas criadas:
+
+- Estudantes
+- Docentes
+- Turmas
+- Especialidade do docente
+- Hobbys do estudante
+- Tabela de join para estudante e hobby
+- Tabela de join para docente e especialidade
+
+
