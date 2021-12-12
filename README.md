@@ -4,11 +4,11 @@ Aplicação de backend desenvolvida em Typescript para gerir estudantes, turmas 
 Foi utilizado o MySQL como banco de dados, o Postman para construir a documentação da API e o nodejs para a construção dos endpoints e queries.
 
 
-##Integrantes
+## Integrantes
 
-1 - Élida Nunes
-2 - Marina Ramminger
-3 - Sarah Romanhol
+- Élida Nunes
+- Marina Ramminger
+- Sarah Romanhol
 
 
 ## Documentação do Postam:
