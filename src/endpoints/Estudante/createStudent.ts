@@ -1,8 +1,8 @@
 import { Request, Response } from "express";
-import inserDocente from "./Estudante/queries/insertDocente";
+import inserStudent from "./queries/insertStudent";
 
 
-export default async function createDocente(
+export default async function createStudent(
     req: Request,
     res: Response
 ) {
@@ -10,35 +10,33 @@ export default async function createDocente(
         if (
             !req.body.nome ||
             !req.body.email ||
-            !req.body.dataNasc ||
-            !req.body.turmaId
-           
+            !req.body.data_nasc ||
+            !req.body.turma_id
         ) {
             res
                 .status(400)
-                .send("Atenção! Campo incompleto")
+                .send('Preencha os campos "nome", "email", "data_nasc" e "turma_id"')
         }
 
         const id: string = Date.now().toString()
 
-        await inserDocente(
+        await inserStudent(
             id,
             req.body.nome,
             req.body.email,
-            req.body.dataNasc,
-            req.body.turmaId,
-            
+            req.body.data_nasc,
+            req.body.turma_id
         )
 
 
         res
             .status(200)
-            .send('Professor inserido com sucesso')
+            .send('Estudante criado com sucesso')
 
 
     } catch (error) {
         res.status(400).send({
-            message: error.message || error.sqlMessage
+            message: error
         })
     }
 }

@@ -1,15 +1,15 @@
 import express, { Express, Request, Response } from "express";
 import cors from "cors";
 import { AddressInfo } from "net";
-import criarTurma from "./endpoints/turmas/criarTurma";
-import buscarTurmas from "./endpoints/turmas/buscarTurmas"
-import mudarModulo from "./endpoints/turmas/mudarModulo";
-import createStudent from "./data/endpoints/Estudante/createStudent";
-import getStudentByName from "./data/endpoints/Estudante/getStudentByName";
-import editStudentClass from "./data/endpoints/Estudante/editStudentClass";
-import createDocente from "./data/endpoints/createDocente";
-import getDocente from "./data/endpoints/getDocente";
-import editDocenteClass from "./data/endpoints/editDocenteClass";
+import criarTurma from "./endpoints/Turma/criarTurma";
+import buscarTurmas from "./endpoints/Turma/buscarTurmas"
+import mudarModulo from "./endpoints/Turma/mudarModulo";
+import createStudent from "./endpoints/Estudante/createStudent";
+import getStudentByName from "./endpoints/Estudante/getStudentByName";
+import editStudentClass from "./endpoints/Estudante/editStudentClass";
+import createDocente from "./endpoints/Docente/createDocente";
+import getDocente from "./endpoints/Docente/getDocente";
+import editDocenteClass from "./endpoints/Docente/editDocenteClass";
 
 
 const app: Express = express();
@@ -26,14 +26,14 @@ app.get("/turmas", buscarTurmas)
 app.put("/turmas", mudarModulo)
 
 //ESTUDANTE ENDPOINTS
-app.put("/student", createStudent)
-app.get("/student/:nome", getStudentByName)
-app.post("/student/edit", editStudentClass)
+app.put("/estudante", createStudent)
+app.get("/estudante/:nome", getStudentByName)
+app.post("/estudante", editStudentClass)
 
 // DOCENTE ENDPOINTS
 app.put("/docente", createDocente)
-app.get("/docentes", getDocente)
-app.post("/docente/edit/:id", editDocenteClass)
+app.get("/docente", getDocente)
+app.post("/docente", editDocenteClass)
 
 
 const server = app.listen(process.env.PORT || 3003, () => {

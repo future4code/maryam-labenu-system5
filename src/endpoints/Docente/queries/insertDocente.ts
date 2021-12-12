@@ -1,5 +1,5 @@
-import { Docentes, Especialidades } from "../../../../types";
-import { connection } from "../../../connection";
+import { Docentes, Especialidades } from "../../../types";
+import { connection } from "../../../data/connection";
 
 export default async function inserDocente(
     id: string,

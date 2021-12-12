@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import updateDocente from "./Estudante/queries/updateDocente";
+import updateDocente from "./queries/updateDocente";
 
 export default async function editDocenteClass(
     req: Request,
@@ -11,7 +11,7 @@ export default async function editDocenteClass(
                 !req.body.turmaId
         ) {
             res.status(400).send({
-                message: "Campos incompletos!"
+                message: "Campos incompletos! Insira os dados de id e turmaId"
             })
         }
 

@@ -6,12 +6,9 @@ export default async function editStudentClass(
     res: Response
 ) {
     try {
-        if (
-            req.body.id === '' ||
-            req.body.turma_id === ''
-        ) {
+        if (!req.body.id || !req.body.turma_id) {
             res.status(400).send({
-                message: "Nenhum dos campos podem estar em branco"
+                message: 'Nenhum dos campos podem estar em branco. Escreva o "id" e o "turma_id"'
             })
         }
 
